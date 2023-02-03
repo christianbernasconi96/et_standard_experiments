@@ -1,0 +1,27 @@
+ET_Network_params:
+  name : BaseEntityTypingNetwork
+  network_params:
+    encoder_params:
+      name : ELMoEncoder
+      option_file_path: '/home/cbernasconi/et/experiments/elmo/elmo_files/options.json'
+      weight_file_path: '/home/cbernasconi/et/experiments/elmo/elmo_files/weights.hdf5'
+      encoding_mode: 'mmc' # [mmc, m_mc]
+    type_encoder_params:
+      name : OneHotTypeEncoder
+      trainable: False
+    input_projector_params:
+      name : KENNClassifier
+      learnable_clause_weight: True
+      clause_weight: 0.5
+      kb_mode: top_down
+      layers_parameters: 
+        '0':
+          in_features : encoder_dim
+          out_features: in_features
+          use_dropout: False
+          activation: relu
+        '1':
+          in_features: previous_out_features
+          out_features : type_number
+          use_dropout: False
+          activation: none

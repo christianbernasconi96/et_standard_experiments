@@ -1,0 +1,12 @@
+dataset_paths:
+  train: /home/remote_hdd/datasets/bbn/train.json
+  dev: /home/remote_hdd/datasets/bbn/dev.json
+  test: /home/remote_hdd/datasets/bbn/test-12k.json
+tokenizer_params:
+  name : ELMoTokenizedDataset
+  max_tokens: 80
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: /home/remote_hdd/tokenized_datasets/bbn/et_standard
+  light: True
+  # types_list_path: TBD

@@ -1,0 +1,16 @@
+dataset_paths:
+  train: /home/remote_hdd/datasets/ontonotes_onoe_denoising/g_train_tree.json
+  dev: /home/remote_hdd/datasets/ontonotes_onoe_denoising/g_dev_tree.json
+  test: /home/remote_hdd/datasets/ontonotes_onoe_denoising/g_test_tree.json
+tokenizer_params:
+  name : BaseBERTTokenizedDataset
+  bertlike_model_name: bert-large-cased
+  max_mention_words: 7
+  max_right_words: 9
+  max_left_words: 9
+  max_tokens: 80
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: /home/remote_hdd/tokenized_datasets/ontonotes_onoe_denoising/et_standard
+  light: True
+  # types_list_path: TBD

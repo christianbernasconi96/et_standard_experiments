@@ -1,0 +1,12 @@
+dataset_paths:
+  train: /home/remote_hdd/datasets/ontonotes_shimaoka/train.json
+  dev: /home/remote_hdd/datasets/ontonotes_shimaoka/dev.json
+  test: /home/remote_hdd/datasets/ontonotes_shimaoka/test.json
+tokenizer_params:
+  name : ELMoTokenizedDataset
+  max_tokens: 80
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: /home/remote_hdd/tokenized_datasets/ontonotes_shimaoka/et_standard
+  light: True
+  # types_list_path: TBD

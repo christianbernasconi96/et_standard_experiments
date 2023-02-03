@@ -1,0 +1,17 @@
+dataset_paths:
+  train: /home/remote_hdd/datasets/ontonotes_augmented/train.json
+  dev: /home/remote_hdd/datasets/ontonotes_augmented/dev.json
+  test: /home/remote_hdd/datasets/ontonotes_shimaoka/test.json
+tokenizer_params:
+  name : ELMoTokenizedDatasetLarge
+  max_tokens: 80
+  slice_dimension: 2500
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: /home/cbernasconi/tokenized_datasets_temp/ontonotes_augmented/et_standard
+  light: True
+  # types_list_path: TBD
+
+# NOTE: overwrite common_elmo.yaml values
+dataset_params:
+  name: ELMo_ET_DatasetLarge

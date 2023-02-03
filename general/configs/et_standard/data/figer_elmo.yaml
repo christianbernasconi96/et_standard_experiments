@@ -1,0 +1,18 @@
+dataset_paths:
+  train: /home/remote_hdd/datasets/figer/train.json
+  dev: /home/remote_hdd/datasets/figer/dev.json
+  test: /home/remote_hdd/datasets/figer/test.json
+tokenizer_params:
+  name : ELMoTokenizedDatasetLarge
+  max_tokens: 80
+  slice_dimension: 10000
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  # dirpath: /home/remote_hdd/tokenized_datasets/figer/et_standard
+  dirpath: /home/cbernasconi/tokenized_datasets_temp/figer/et_standard
+  light: True
+  # types_list_path: TBD
+
+# NOTE: overwrite common_elmo.yaml values
+dataset_params:
+  name: ELMo_ET_DatasetLarge
